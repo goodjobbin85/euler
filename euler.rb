@@ -30,6 +30,9 @@ five_count = []
 while  answer < 1000
 	answer = c * second_multiplier
 	second_multiplier += 1
+	if answer > 1000
+		break 
+	end
 	five_count << answer
 end
 
@@ -38,10 +41,13 @@ print five_count
 puts ' '
 puts ' '
 
-full_count = three_count + five_count
-full_count.each do |number| 
-	
+five_count.each do |number|
+	if three_count.include? number
+		three_count << number
+	end
 end
+
+full_count = three_count
 
 sum = 0
 full_count.each  do |number|
