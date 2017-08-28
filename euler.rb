@@ -1,40 +1,49 @@
 #find sum of all multiples of 3 and 5, while under `1000
 #later we should generalize
 
-a = 3
+
+puts "Please enter two numbers that you would like to find 
+	  all the multiples of, give us an upper limit, and we will
+	  give you the sum of all the multiples"
+
+puts "What is the first number?"
+a = gets.chomp.to_i
+
+puts "What is the second number?"
+c = gets.chomp.to_i
+
+puts "And finally, what is the upper limit?"
+upper_limit = gets.chomp.to_i
+
 multiplier = 1
 ans = a
 three_count = []
 
-while ans < 1000
+while ans < upper_limit
 	ans = a * multiplier
 	multiplier += 1
-	if ans >= 1000
+	if ans >= upper_limit
 		break
 	end
 	three_count << ans
 end
 
-print three_count
-
 puts ' '
 puts ' '
 
-c = 5
+
 second_multiplier = 1
 answer = c
 five_count = []
 
-while answer < 1000
+while answer < upper_limit
 	answer = c * second_multiplier
 	second_multiplier += 1
-	if answer >= 1000
+	if answer >= upper_limit
 		break 
 	end
 	five_count << answer
 end
-
-print five_count
 
 puts ' '
 puts ' '
@@ -49,7 +58,7 @@ five_count.each do |number|
 end
 
 
-puts three_count
+
 
 full_count = three_count
 
@@ -58,7 +67,8 @@ full_count.each  do |number|
 	sum += number
 end
 
-puts "The sum is #{sum}"
+puts "The full list of multiples is #{full_count}"
+puts "The sum of all multiples of #{a} and #{c} is #{sum}"
 
 
 
