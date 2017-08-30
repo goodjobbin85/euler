@@ -1,5 +1,5 @@
 #find sum of all multiples of 3 and 5, while under `1000
-#later we should generalize
+#complete
 
 
 puts "Please enter two numbers that you would like to find 
@@ -68,7 +68,7 @@ full_count.each  do |number|
 end
 
 puts "The full list of multiples is #{full_count}"
-puts "The sum of all multiples of #{a} and #{c} is #{sum}"
+puts "The sum of all multiples of #{a} and #{c} below #{upper_limit} is #{sum}"
 
 
 
